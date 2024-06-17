@@ -1,0 +1,23 @@
+<h1>All Users</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Download</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.user_name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.phone %></td>
+        <td>
+          <%= link_to 'Download Order History', export_user_path(user,format: :csv), id: 'export-csv-button' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

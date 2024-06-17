@@ -1,0 +1,5 @@
+constants: 
+  batch_size: 10
+  users_csv_file: "lib/users.csv"
+  products_csv_file: "lib/products.csv"
+  order_details_csv_file: "lib/order_details.csv"
